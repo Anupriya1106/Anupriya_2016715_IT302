@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Question 18</title>
+    <style>
+        @keyframes animate1 {
+            0% {
+                transform: translateX(0px);
+            }
+
+            25% {
+                transform: translateX(600px);
+            }
+
+            50% {
+                transform: translateY(400px) translateX(600px);
+            }
+
+            75% {
+                transform: translateX(0px) translateY(400px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .container {
+            position: relative; 
+            animation-name: animate1;
+            animation-duration: 4s;
+            animation-iteration-count:infinite;
+             animation-timing-function: ease-in-out; 
+             /* animation-direction:reverse;  */
+        }
+
+        .container img {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/1.jpeg" />
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title> Question 26</title>
+        <style>
+            
+            #timer{
+                height: 50%;
+                width: 50%;
+                border: 5px solid rgb(1, 36, 14);
+                background-color: rgb(4, 90, 61);
+                justify-content: center;
+                align-items: center;
+                font-size: 80px;
+                padding: 30px;
+                color: rgb(34, 3, 3);
+
+            }
+            .clock{
+                margin-top: 20px;
+                /* color: aqua; */
+            } 
+            #b1{
+                border: 2px solid black;
+                border-radius: 10px;
+                background-color: rgb(173, 101, 137);
+                font-weight: bold;
+            }
+            #b2{
+                border: 2px solid black;
+                border-radius: 10px;
+                background-color: rgb(161, 233, 119);
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+         <div id="timer"> </div>
+            <script>
+                count = 0;
+                function start()
+                {
+                    block = document.getElementById('timer');
+                    block.innerHTML = count;
+                    count++;
+                }
+
+               onclick = "x = setinterval(start,1000)";
+            </script>
+            <div class="clock">
+                <button id = "b1" onclick = "x = setInterval(start,1000)">START</button>
+                <button id = "b2" onclick = "clearInterval(x)">STOP</button>
+            </div>
+        
+    </body>
+</html>

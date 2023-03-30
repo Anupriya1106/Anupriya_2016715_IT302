@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Text Growing and Shrinking</title>
+    <style>
+        h1 {
+            background-color: rgb(5, 65, 83);
+            border-radius: 20px;
+            width: 560px;
+            padding: 20px;
+            margin-left: 30%;
+            color:aquamarine;
+        }
+        p{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TEXT GROWING AND SHRINKING !!</h1>
+    <p id="text" style="font-size: 10pt;" align="center">TEXT-GROWING</p>
+    <script>
+
+        let intervalId;
+        let fontSize = 10;
+        let growing = true;
+        let textElement = document.getElementById("text");
+
+        intervalId = setInterval(function () {
+            if (growing) {
+                textElement.style.color = "violet";
+                fontSize++;
+                if (fontSize >= 50) {
+                    growing = false;
+                }
+            } else {
+                textElement.style.color = "crimson";
+                fontSize--;
+                if (fontSize <= 5) {
+                    clearInterval(intervalId);
+                }
+            }
+            textElement.style.fontSize = fontSize + "pt";
+            textElement.textContent = fontSize >= 50 ? "TEXT-SHRINKING" : "TEXT-GROWING";
+        }, 100);
+
+    </script>
+</body>
+
+</html>

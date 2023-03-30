@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Question24</title>
+        
+    </head>
+    <body>
+        <form action="">
+            <input type="number" onchange="convert()">
+            <select name="id" onchange="convert()">
+                <option value="k">kelvin</option>
+                <option value="f">fahrenheit</option>
+                <option value="c">celcius</option>
+            </select>
+            <input type="number">
+            <select name="id" onchange="convert()">
+                <option value="k">kelvin</option>
+                <option value="f">fahrenheit</option>
+                <option value="c">celcius</option>
+            </select>
+            <br><br>
+            
+        </form>
+        <!-- <button class="btn" onclick="convert()">CONVERT</button> -->
+        <script>
+         function convert(){
+             input=parseInt(document.forms[0].elements[0].value);
+             inOp=document.forms[0].elements[1].value;
+             outOp=document.forms[0].elements[3].value;
+
+             if(inOp=='c' && outOp=='k'){
+                 result=input+273;
+             }
+             else if(inOp=='c' && outOp=='f'){
+                 result=(c*9/5)+32;
+             }
+             else if(inOp=='f' && outOp=='c'){
+                 result=96.8/32;
+             }
+            //  else if(inOp=='f'&& outOp=='k'){
+            //       result=
+            //  }
+            //  else if(inOp=='f'&& outOp=='c'){
+            //       result=
+            //  }
+            //  else if(inOp=='f'&& outOp=='c'){
+            //       result=
+            //  }
+            else{
+                result=input;
+            }
+                document.forms[0].elements[2].value=result;
+            
+         }
+        </script>
+    </body>
+</html>

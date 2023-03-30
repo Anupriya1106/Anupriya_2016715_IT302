@@ -1,0 +1,31 @@
+
+
+.image{
+    
+    height: 100%;
+    width:100%;
+    flex-wrap: wrap;
+    background: linear-gradient(rgb(85, 4, 4), rgb(65, 65, 177));
+    /* flex-direction: column-reverse; */
+    justify-content: space-evenly;
+    border: 20px brown;
+}
+
+.image img{
+    height: 80px;
+    width: 100px;
+      display: flex;  
+     flex-direction:row; 
+    margin-top: 30px;
+    margin-left: 5%;
+
+    
+}
+.image>div:hover{
+    transform:scale(2.1);
+     transition: width 2s; 
+    /* position:relative; */
+    
+}
+
+

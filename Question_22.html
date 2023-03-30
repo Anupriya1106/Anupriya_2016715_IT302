@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Question 22</title>
+        <style>
+              .inner1{
+                height: 100px;
+                width: 100px;
+                background-color: black;
+                border: 1px white;
+                padding: 1px;
+
+              }
+
+              .inner2{
+                height: 100px;
+                width: 100px;
+                background-color: white;
+                background-size: cover;
+                border: 1px solid black; 
+              }
+               .container{ 
+                 display: flex; 
+               } 
+               .inner1:hover{
+                background-color: rgb(85, 193, 226);
+               }
+
+               .inner2:hover{
+                background-color: rgb(128, 9, 45);
+               }
+        </style>
+    </head>
+    <body>
+        <script>
+            m = prompt("Enter row number:");
+            n = prompt("Enter column number:");
+
+            for(i=0; i<m; i++)
+            {
+                document.write("<div class = 'container'>");
+                    for(j=0; j<n; j++)
+                    {
+                        if((i + j) % 2 == 0)
+                        document.write("<div class = 'inner1'></div>");
+
+                        else
+                        document.write("<div class = 'inner2'></div>");
+                    }
+                    document.write("</div>");
+            }
+        </script>
+    </body>
+</html>

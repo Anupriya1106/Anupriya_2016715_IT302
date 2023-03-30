@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Question 28</title>
+    <style>
+        p {
+            background: linear-gradient(rgb(6, 241, 241), rgb(88, 218, 174));
+            border: 3px solid rgb(18, 173, 160);
+            padding: 50px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            margin-top: 25%;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            color:rgb(5, 80, 80);
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let userName = prompt("What is your name?");
+
+        let now = new Date();
+
+        let hours = now.getHours();
+        let greeting;
+        if (hours < 12) {
+            greeting = "Good morning";
+        } else if (hours < 18) {
+            greeting = "Good afternoon";
+        } else {
+            greeting = "Good evening";
+        }
+
+
+        let greetingMessage = document.createElement("p");
+        greetingMessage.textContent = greeting + ", " + userName + "!";
+        document.body.appendChild(greetingMessage);
+    </script>
+</body>
+
+</html>

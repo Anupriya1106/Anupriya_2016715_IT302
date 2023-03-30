@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Question 27</title>
+    </head>
+    <body>
+        <div id="clock"></div>
+        <script>
+            function date()
+            {
+                d = new Date();
+                hh = d.getHours();
+                mm = d.getMinutes();
+                ss = d.getSeconds();
+                cTime = hh + ":" + mm + ":" + ss;
+                block = document.getElementById('clock');
+                block.innerHtml = cTime;
+            }
+        </script>
+    </body>
+</html>
